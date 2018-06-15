@@ -9,7 +9,7 @@ import datetime as dt
 ticker = sys.argv[1]
 
 # Setting up data extract
-start = dt.datetime(2015, 1, 1)
+start = dt.datetime(2006, 1, 1)
 end = dt.datetime.now()
 df = web.DataReader(ticker, 'morningstar', start, end)
 df.reset_index(inplace=True)
