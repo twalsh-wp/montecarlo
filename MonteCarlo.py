@@ -1,14 +1,12 @@
 import pandas as pd
 import numpy as np
+import sys
 import scipy.stats as sci
-from math import sqrt
 import matplotlib.pyplot as plt
 import pandas_datareader.data as web
-from matplotlib import style
 import datetime as dt
-style.use('ggplot')
 
-ticker = ''
+ticker = sys.argv[1]
 
 # Setting up data extract
 start = dt.datetime(2015, 1, 1)
@@ -21,7 +19,7 @@ df = df.drop("Symbol", axis=1)
 
 
 ### Data Manipulations
-log_returns = np.log(1+data.pct_change())
+log_returns = np.log(1+df['Close'].pct_change())
 u = log_returns.mean()
 var = log_returns.var()
 stddev = log_returns.std()
