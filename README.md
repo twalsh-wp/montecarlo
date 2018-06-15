@@ -18,6 +18,12 @@ pandas_datareader
 numpy
 ```
 
+You can install these packages with pip.
+
+```
+pip3 install pandas_datareader
+```
+
 ## Acknowledgments
 
 * http://www.pythonforfinance.net/2016/11/28/monte-carlo-simulation-in-python/
