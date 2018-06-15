@@ -25,7 +25,6 @@ var = log_returns.var()
 stddev = log_returns.std()
 drift = u - (0.5 * var)
 
-# Examine 10 possible outcomes (assign 10 to interations)
 t_intervals = 252
 iterations = 10000
 
